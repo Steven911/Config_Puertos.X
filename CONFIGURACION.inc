@@ -12,7 +12,7 @@ osc_conf:
     bcf	    STATUS,RP1  ;pone RP1 en 0
     movlw   0xf1	    
     movwf   OSCCON
-    banksel PORTA	;posicionarse en el banco donde est· el puerto A
+    
     
     return
 
@@ -21,7 +21,7 @@ port_conf:
     movlw   0xff        ;PONER PUWRTO A COMO ENTRADA
     movwf   TRISA       ;movemos el dato al TRISA
     clrf    TRISB       ;clareamos el TRISB para ponerlo como salida
-    bsf	    STATUS,RP1  ;vuelve a poner RP1 en 1 y ya est· en el banco 3
+    bsf	    STATUS,RP1  ;vuelve a poner RP1 en 1 y ya est√° en el banco 3
     clrf    ANSEL	;permite q la entrada sea digital haciendolo 0
     clrf    ANSELH	;	"    "  "    "	   "     "        "      
     bcf	    STATUS,RP0  ;pone RP0 en 0
